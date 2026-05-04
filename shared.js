@@ -13,39 +13,63 @@
     btn.innerHTML = '<span></span><span></span><span></span>';
     nav.appendChild(btn);
 
-    const overlay = document.createElement('div');
-    overlay.className = 'mobile-menu';
+    const backdrop = document.createElement('div');
+    backdrop.className = 'mobile-backdrop';
 
+    const drawer = document.createElement('div');
+    drawer.className = 'mobile-menu';
+
+    // Header row: brand + close button
+    const head = document.createElement('div');
+    head.className = 'mobile-menu-head';
+    const brandClone = document.querySelector('nav.site-nav .brand').cloneNode(true);
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'mobile-menu-close';
+    closeBtn.setAttribute('aria-label', 'Fechar menu');
+    closeBtn.textContent = '×';
+    closeBtn.addEventListener('click', closeMenu);
+    head.appendChild(brandClone);
+    head.appendChild(closeBtn);
+    drawer.appendChild(head);
+
+    // Nav links
+    const innerNav = document.createElement('nav');
     document.querySelectorAll('nav.site-nav .nav-links a').forEach(a => {
       const link = a.cloneNode(true);
       link.addEventListener('click', closeMenu);
-      overlay.appendChild(link);
+      innerNav.appendChild(link);
     });
+    drawer.appendChild(innerNav);
 
+    // CTA
     const ctaLink = document.createElement('a');
     ctaLink.className = 'cta m-cta';
     ctaLink.href = 'encomendas.html';
-    ctaLink.textContent = 'Encomendar';
+    ctaLink.textContent = 'Encomendar agora';
     ctaLink.addEventListener('click', closeMenu);
-    overlay.appendChild(ctaLink);
+    drawer.appendChild(ctaLink);
 
-    document.body.appendChild(overlay);
+    document.body.appendChild(backdrop);
+    document.body.appendChild(drawer);
 
     function openMenu() {
       btn.classList.add('open');
       btn.setAttribute('aria-label', 'Fechar menu');
-      overlay.classList.add('open');
+      backdrop.classList.add('open');
+      drawer.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
     function closeMenu() {
       btn.classList.remove('open');
       btn.setAttribute('aria-label', 'Abrir menu');
-      overlay.classList.remove('open');
+      backdrop.classList.remove('open');
+      drawer.classList.remove('open');
       document.body.style.overflow = '';
     }
     btn.addEventListener('click', () =>
       btn.classList.contains('open') ? closeMenu() : openMenu()
     );
+    backdrop.addEventListener('click', closeMenu);
   }
 
   // WhatsApp FAB + tip
