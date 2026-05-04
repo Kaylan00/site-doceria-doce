@@ -4,6 +4,50 @@
   const MSG = 'Olá Mielle! Vi o site e gostaria de fazer um pedido.';
   const WA_URL = `https://wa.me/${PHONE}?text=${encodeURIComponent(MSG)}`;
 
+  // ── Hamburger menu ──────────────────────────────────
+  const nav = document.querySelector('nav.site-nav');
+  if (nav) {
+    const btn = document.createElement('button');
+    btn.className = 'nav-hamburger';
+    btn.setAttribute('aria-label', 'Abrir menu');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    nav.appendChild(btn);
+
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-menu';
+
+    document.querySelectorAll('nav.site-nav .nav-links a').forEach(a => {
+      const link = a.cloneNode(true);
+      link.addEventListener('click', closeMenu);
+      overlay.appendChild(link);
+    });
+
+    const ctaLink = document.createElement('a');
+    ctaLink.className = 'cta m-cta';
+    ctaLink.href = 'encomendas.html';
+    ctaLink.textContent = 'Encomendar';
+    ctaLink.addEventListener('click', closeMenu);
+    overlay.appendChild(ctaLink);
+
+    document.body.appendChild(overlay);
+
+    function openMenu() {
+      btn.classList.add('open');
+      btn.setAttribute('aria-label', 'Fechar menu');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      btn.classList.remove('open');
+      btn.setAttribute('aria-label', 'Abrir menu');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    btn.addEventListener('click', () =>
+      btn.classList.contains('open') ? closeMenu() : openMenu()
+    );
+  }
+
   // WhatsApp FAB + tip
   const fab = document.createElement('a');
   fab.className = 'wa-fab';
