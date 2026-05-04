@@ -25,7 +25,7 @@ html,body{margin:0;padding:0}
 body{
   font-family:"Inter",system-ui,sans-serif;
   color:var(--ink);
-  background:#e7dccb;
+  background:var(--page-bg);
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
@@ -34,25 +34,25 @@ img{max-width:100%;display:block}
 a{color:inherit}
 
 .page{
-  width:685px;
-  margin:24px auto;
   background:var(--page-bg);
-  box-shadow:0 30px 80px -30px rgba(60,32,26,.3);
-  overflow:hidden;
   position:relative;
+}
+.wrap{
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:clamp(20px,4vw,60px);
+  padding-right:clamp(20px,4vw,60px);
 }
 
 /* ---------------- NAV ---------------- */
 nav.site-nav{
-  position:absolute;top:0;left:0;right:0;z-index:5;
+  position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
-  padding:18px 26px;
-}
-nav.site-nav.solid{
-  position:relative;
+  padding:16px clamp(20px,4vw,60px);
   background:var(--hero-bg);
-  padding-bottom:24px;
 }
+nav.site-nav.solid{position:fixed;}
 .brand{
   font-family:"Fraunces",serif;
   font-weight:500;font-style:italic;
@@ -85,7 +85,7 @@ nav.site-nav.solid{
 /* ---------------- HERO BANNER (small for inner pages) ---------------- */
 .banner{
   position:relative;background:var(--hero-bg);color:#fbf6f0;
-  padding:78px 38px 60px;overflow:hidden;
+  padding:100px clamp(20px,4vw,60px) 60px;overflow:hidden;
 }
 .banner::before{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -134,7 +134,7 @@ nav.site-nav.solid{
 /* ---------------- FOOTER ---------------- */
 footer.site-footer{
   position:relative;background:var(--footer);color:#f4ecdf;
-  padding:30px 32px 22px;margin-top:8px;
+  padding:30px 0 22px;margin-top:8px;overflow:hidden;
 }
 .tear-top{
   position:absolute;left:-2px;right:-2px;top:-1px;height:38px;transform:scaleY(-1);
@@ -144,6 +144,8 @@ footer.site-footer{
 }
 .foot-grid{
   display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px;margin-bottom:18px;
+  max-width:1200px;margin-left:auto;margin-right:auto;
+  padding-left:clamp(20px,4vw,60px);padding-right:clamp(20px,4vw,60px);
 }
 .foot-grid h5{
   font-family:"Fraunces",serif;font-style:italic;font-weight:500;
@@ -157,6 +159,8 @@ footer.site-footer{
   display:flex;justify-content:space-between;align-items:center;
   padding-top:14px;border-top:1px solid rgba(244,236,223,.18);
   font-size:9px;color:rgba(244,236,223,.6);letter-spacing:.06em;text-transform:uppercase;
+  max-width:1200px;margin-left:auto;margin-right:auto;
+  padding-left:clamp(20px,4vw,60px);padding-right:clamp(20px,4vw,60px);
 }
 .foot-social{display:flex;gap:8px}
 .foot-social a{
@@ -248,7 +252,10 @@ footer.site-footer{
 
 /* utility */
 .section-head{
-  text-align:center;padding:30px 32px 6px;
+  text-align:center;
+  padding:30px clamp(20px,4vw,60px) 6px;
+  max-width:1200px;
+  margin-left:auto;margin-right:auto;
 }
 .section-head .eyebrow{
   font-size:10px;letter-spacing:.2em;text-transform:uppercase;

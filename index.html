@@ -29,10 +29,11 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero" style="position:relative;background:var(--hero-bg);color:#fbf6f0;padding:78px 38px 70px;overflow:hidden;">
+  <section class="hero" style="position:relative;background:var(--hero-bg);color:#fbf6f0;padding:100px 0 70px;overflow:hidden;">
     <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(600px 200px at 90% 10%, rgba(255,255,255,.10), transparent 60%),radial-gradient(400px 200px at 10% 90%, rgba(0,0,0,.18), transparent 60%);"></div>
 
-    <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;min-height:380px">
+    <div class="wrap" style="position:relative;z-index:2;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);align-items:center;min-height:380px">
       <div>
         <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(251,246,240,.7);margin:0 0 14px">Café · Doces · Confeitaria</p>
         <h1 style="font-family:Fraunces,serif;font-weight:400;font-size:46px;line-height:.96;letter-spacing:-.02em;margin:6px 0 14px;color:#fbf6f0;font-variation-settings:'SOFT' 30;">Sweet Moments<br/>Start Here<span style="color:#f1cdcd">.</span></h1>
@@ -58,12 +59,13 @@
         </div>
       </div>
     </div>
+    </div><!-- /.wrap -->
 
     <div class="tear-bottom"></div>
   </section>
 
   <!-- FEATURES -->
-  <section style="display:flex;gap:30px;padding:30px 40px 8px">
+  <section style="padding:30px 0 8px"><div class="wrap" style="display:flex;gap:clamp(16px,3vw,40px)">
     <div style="display:flex;gap:10px;align-items:flex-start;flex:1">
       <div style="width:32px;height:32px;border-radius:50%;background:#e8d5cb;display:grid;place-items:center;flex:0 0 32px;color:var(--ink-dark)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -91,10 +93,10 @@
         <p style="margin:0;font-size:9px;color:var(--muted);line-height:1.5">Receitas de família, ingredientes locais.</p>
       </div>
     </div>
-  </section>
+  </div></section>
 
   <!-- PRODUCT CARDS -->
-  <section style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:22px 32px 12px">
+  <section style="padding:22px 0 12px"><div class="wrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
     <a href="cardapio.html" style="text-decoration:none;display:block;min-width:0">
       <article class="product-card pink">
         <span class="tag">Top</span>
@@ -125,10 +127,10 @@
         <div class="meta"><span class="name">Café & lavanda</span><span class="price">R$16</span></div>
       </article>
     </a>
-  </section>
+  </div></section>
 
   <!-- ABOUT / LATTE -->
-  <section style="display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center;padding:36px 38px 30px">
+  <section style="padding:36px 0 30px"><div class="wrap" style="display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,60px);align-items:center">
     <div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 24px 50px -20px rgba(60,32,26,.4);min-width:0;width:100%">
       <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&auto=format&fit=crop" alt="Latte art com framboesa" style="width:100%;height:100%;object-fit:cover" />
     </div>
@@ -138,7 +140,7 @@
       <p style="color:var(--muted-2);font-size:11px;line-height:1.65;margin:0 0 14px">Aqui se mistura grão, leite vaporizado e tempo — daquele que não cabe em pressa. Cada latte é desenhado à mão, cada doce sai do forno enquanto você lê o jornal.</p>
       <a class="cta light" href="encomendas.html">Reservar uma encomenda <span>›</span></a>
     </div>
-  </section>
+  </div></section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
