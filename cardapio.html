@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<title>Mielle — Cardápio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="shared.css" />
+</head>
+<body>
+
+<div class="page" data-screen-label="02 Cardápio">
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">Mielle<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cardapio.html">Cardápio</a></li>
+      <li><a href="encomendas.html">Encomendas</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button class="icon-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <div class="avatar"></div>
+      <button class="plus">+</button>
+    </div>
+  </nav>
+
+  <section class="banner">
+    <p class="crumb">Home / Cardápio</p>
+    <h1 class="page-title">Tudo que sai<br/>da nossa cozinha<span style="color:#f1cdcd">.</span></h1>
+    <p class="lede">Cafés especiais, doces de forno e geladeira, lanches do dia. Cardápio rotativo conforme a estação — pergunte pelo especial do dia.</p>
+    <div class="tear-bottom"></div>
+  </section>
+
+  <!-- Filter pills -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;padding:24px 32px 6px;justify-content:center">
+    <button style="background:var(--btn);color:#fbf6f0;border:none;border-radius:999px;padding:8px 16px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Todos</button>
+    <button style="background:transparent;color:var(--ink-dark);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Cafés</button>
+    <button style="background:transparent;color:var(--ink-dark);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Bolos</button>
+    <button style="background:transparent;color:var(--ink-dark);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Doces</button>
+    <button style="background:transparent;color:var(--ink-dark);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Salgados</button>
+  </div>
+
+  <!-- Cafés -->
+  <div class="section-head"><p class="eyebrow">— Cafés —</p><h2>Da xícara</h2></div>
+  <section style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 32px 8px">
+    <article class="product-card peach">
+      <h3>Latte</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=600&auto=format&fit=crop" alt="Latte"/></div>
+      <p class="desc">Espresso duplo, leite vaporizado, arte da casa.</p>
+      <div class="meta"><span class="name">Quente · 240ml</span><span class="price">R$14</span></div>
+    </article>
+    <article class="product-card pink">
+      <span class="tag">Top</span>
+      <h3>Mocha</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&auto=format&fit=crop" alt="Mocha"/></div>
+      <p class="desc">Chocolate 70%, espresso, chantilly leve.</p>
+      <div class="meta"><span class="name">Quente · 280ml</span><span class="price">R$18</span></div>
+    </article>
+    <article class="product-card lilac">
+      <h3>Cold Brew</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&auto=format&fit=crop" alt="Cold brew"/></div>
+      <p class="desc">Extração 18h, notas de cacau e nozes.</p>
+      <div class="meta"><span class="name">Gelado · 320ml</span><span class="price">R$16</span></div>
+    </article>
+  </section>
+
+  <!-- Doces -->
+  <div class="section-head"><p class="eyebrow">— Confeitaria —</p><h2>Da vitrine</h2></div>
+  <section style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 32px 8px">
+    <article class="product-card pink">
+      <h3>Atelier</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop" alt="Naked cake"/></div>
+      <p class="desc">Naked cake de baunilha, ganache e framboesa fresca.</p>
+      <div class="meta"><span class="name">Fatia · 120g</span><span class="price">R$18</span></div>
+    </article>
+    <article class="product-card peach">
+      <span class="tag">Novo</span>
+      <h3>Lermi</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop" alt="Brownie"/></div>
+      <p class="desc">Brownie denso de chocolate belga e avelã torrada.</p>
+      <div class="meta"><span class="name">Quadrado · 90g</span><span class="price">R$12</span></div>
+    </article>
+    <article class="product-card lilac">
+      <span class="tag">Limited</span>
+      <h3>Flûtre</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&auto=format&fit=crop" alt="Café e lavanda"/></div>
+      <p class="desc">Pão de ló com infusão de café, geleia de lavanda.</p>
+      <div class="meta"><span class="name">Fatia · 100g</span><span class="price">R$16</span></div>
+    </article>
+    <article class="product-card sage">
+      <h3>Pistá</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop" alt="Tartelete pistache"/></div>
+      <p class="desc">Tartelete de pistache com frutas vermelhas.</p>
+      <div class="meta"><span class="name">Unidade · 80g</span><span class="price">R$15</span></div>
+    </article>
+    <article class="product-card pink">
+      <h3>Cerise</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1488477304112-4944851de03d?w=600&auto=format&fit=crop" alt="Cheesecake"/></div>
+      <p class="desc">Cheesecake de baunilha com calda de cereja.</p>
+      <div class="meta"><span class="name">Fatia · 130g</span><span class="price">R$17</span></div>
+    </article>
+    <article class="product-card peach">
+      <h3>Croissant</h3>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop" alt="Croissant"/></div>
+      <p class="desc">Folhado em manteiga francesa, 36h de fermentação.</p>
+      <div class="meta"><span class="name">Unidade</span><span class="price">R$11</span></div>
+    </article>
+  </section>
+
+  <div style="text-align:center;padding:24px 32px 36px">
+    <a class="cta" href="encomendas.html">Encomendar pelo WhatsApp</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="tear-top"></div>
+    <div class="foot-grid">
+      <div><a class="brand" href="index.html" style="font-size:22px">Mielle<span class="accent">.</span></a><p style="margin-top:10px">Café e confeitaria artesanal. Pequenos lotes, grandes pausas.</p></div>
+      <div><h5>Navegar</h5><ul><li><a href="index.html">Home</a></li><li><a href="cardapio.html">Cardápio</a></li><li><a href="encomendas.html">Encomendas</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      <div><h5>Visite</h5><ul><li>Rua das Flores, 128</li><li>Seg—Dom · 7h às 20h</li><li>(11) 9 9999-9999</li><li>oi@mielle.cafe</li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Mielle Café & Confeitaria</span><div class="foot-social"><a href="#">@</a><a href="#">↗</a></div></div>
+  </footer>
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
